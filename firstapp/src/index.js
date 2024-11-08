@@ -1,9 +1,18 @@
 import ReactDOM from 'react-dom'
-import pic from './hero.jpg'
+// import pic from './hero.jpg'
 // import smile from './smile.jpg'
 // import cry from './cry.jpg'
+// import course, {place,city,students,people,demo} from './images/data.js'
 
-import './style.css'
+// import One from './images/One'
+// import Two from './images/Two'
+// import Three from './images/Three'
+
+import './images/style.css'
+import Top from './Top'
+import Middle from './Middle'
+import Footer from './Footer'
+
 const root=ReactDOM.createRoot(document.getElementById('root'))
 // let uid = "React JS apps"
 // let items =['bat','ball','pad']
@@ -29,17 +38,17 @@ const root=ReactDOM.createRoot(document.getElementById('root'))
 //     result = "UN-Authorised user"
 // }
 
-const time = new Date()
-let h = time.getHours()
-let result
+// const time = new Date()
+// let h = time.getHours()
+// let result
 
-if(h <= 12){
-   result = "Good morning"
-}else if(h >= 12 && h <= 16){
-    result = "Good afternnon"
-}else {
-    result = "Good evening"
-}
+// if(h <= 12){
+//    result = "Good morning"
+// }else if(h >= 12 && h <= 16){
+//     result = "Good afternnon"
+// }else {
+//     result = "Good evening"
+// }
 
 // let result
 // let uid = prompt("User id")
@@ -69,10 +78,10 @@ root.render(
     // <h3>First name is {person.fname},last name is {person.last}</h3>
     // </>
     
-    <>
-    {/* <h1>{h}:{m}:{s}</h1> */}
-    <h3>{result}</h3>
-    </>
+    // <>
+    // {/* <h1>{h}:{m}:{s}</h1> */}
+    // <h3>{result}</h3>
+    // </>
 
     // <>
     //  {/* from public folder*/}
@@ -93,7 +102,47 @@ root.render(
     //    The Chilukuris hail from Vadluru and Chilakaluripeta in Krishna district, known for their tradition of Veda Avadhanis - scholars of Vedic literature and chanting. Many family members have held positions at prestigious institutions including Andhra University and IIT Madras.</p>
 
     //   <img src={pic}  alt=''/>
+
+
     // </>
 
+
+    // <>
+    // <h1>course is {course}</h1>
+    // <h2>place is {place}</h2>
+    // <h3>city is {city}</h3>
+    // <h2> {students[1]}</h2>
+    // <h1>{people.name}</h1>
+    // <h2>{demo()}</h2>
+
+    // <table border={1}>
+    //   <tr>
+    //     <td>Name</td>
+    //     <td>Age</td>
+    //     <td>Country</td>
+    //   </tr>
+    //   <tr>
+    //     <td>{people.name}</td>
+    //     <td>{people.age}</td>
+    //     <td>{people.country}</td>
+    //   </tr>
+    // </table>
+    // </>
+
+    //components 
+    // <>
+    // <One/>
+    // <Two/>
+    // <Three/>
+    // </>
+
+    <>
+    <div className='container'>
+        <Top/>
+        <Middle/>
+        <Footer/>
+
+    </div>
+    </>
 
 )
