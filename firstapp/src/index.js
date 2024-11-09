@@ -8,10 +8,14 @@ import ReactDOM from 'react-dom'
 // import Two from './images/Two'
 // import Three from './images/Three'
 
-import './images/style.css'
-import Top from './Top'
-import Middle from './Middle'
-import Footer from './Footer'
+// import './images/style.css'
+// import Top from './Top'
+// import Middle from './Middle'
+// import Footer from './Footer'
+
+// import App from './App'
+
+import App1 from './App1'
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
 // let uid = "React JS apps"
@@ -136,13 +140,17 @@ root.render(
     // <Three/>
     // </>
 
-    <>
-    <div className='container'>
-        <Top/>
-        <Middle/>
-        <Footer/>
+    // <>
+    // <div className='container'>
+    //     <Top/>
+    //     <Middle/>
+    //     <Footer/>
 
-    </div>
+    // </div>
+    // </>
+    <>
+    {/* <App/> */}
+    <App1/>
     </>
 
 )
