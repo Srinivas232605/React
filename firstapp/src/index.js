@@ -13,9 +13,9 @@ import ReactDOM from 'react-dom'
 // import Middle from './Middle'
 // import Footer from './Footer'
 
-// import App from './App'
+import App from './App'
 
-import App1 from './App1'
+// import App1 from './App1'
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
 // let uid = "React JS apps"
@@ -150,7 +150,7 @@ root.render(
     // </>
     <>
     {/* <App/> */}
-    <App1/>
+    <App/>
     </>
 
 )
