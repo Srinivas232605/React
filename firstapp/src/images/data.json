@@ -1,0 +1,19 @@
+[
+    {
+        "name" : "ravi",
+        "age":22,
+        "place": "Hyderabad"
+    },
+
+    {
+        "name" : "ram",
+        "age":22,
+        "place": "Hyderabad"
+    },
+
+    {
+        "name" : "mani",
+        "age":22,
+        "place": "Hyderabad"
+    }
+]
