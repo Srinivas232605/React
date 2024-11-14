@@ -1,5 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+// import React, { useEffect } from 'react'
+import { useState, useEffect} from 'react'
+
+
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 // import Child from './Child'
 
@@ -52,11 +54,34 @@ export default function App() {
 // const [state, setState] = useState(array)
 
 
-const [state,setState] = useState([])
-fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response => response.json())
-      // .then(json => console.log(json))
-      .then(json => setState(json))
+// const [state,setState] = useState([])
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//       .then(response => response.json())
+//       // .then(json => console.log(json))
+//       .then(json => setState(json))
+
+
+// const [state, setState]=useState(0)
+// const [data,setData] = useState(100)
+
+// useEffect(()=>{
+//   console.log("Mounted")
+// })
+
+// const add=()=>{
+//   setState(state+1)
+// }
+// const del=()=>{
+//   setData(data-1)
+// }
+
+
+const [state, setState] = useState([])
+useEffect(()=>{
+  fetch('https://fakestoreapi.com/products')
+  .then((res)=>res.json())
+  .then((json)=> setState(json.results))
+})
 
 
   return (
@@ -100,22 +125,55 @@ fetch('https://jsonplaceholder.typicode.com/todos')
   //  {state.map((x)=><li>{x}</li> )}
   // </>
 
-  <>
-  {/* {state.map()((x)=><li>{x.name}</li>)} */}
-  <h1>hello</h1>
-  {/* {state.map((list)=><li>{list.id}</li>)} */}
+  // <>
+  // {/* {state.map()((x)=><li>{x.name}</li>)} */}
+  // <h1>hello</h1>
+  // {/* {state.map((list)=><li>{list.id}</li>)} */}
 
-  <table className='table table-bordered bg-dark text-light'>
-    {state.map((list =>
-      <tr>
-        <td>{list.id}</td>
-        <td>{list.name}</td>
-      </tr>
-    ))}
-  </table>
+  // <table className='table table-bordered bg-dark text-light'>
+  //   {state.map((list =>
+  //     <tr>
+  //       <td>{list.id}</td>
+  //       <td>{list.name}</td>
+  //     </tr>
+  //   ))}
+  // </table>
+  // </>
+
+
+  // <>
+  // {/* {state.filter((search)=>search.place.includes('Hyderabad')).map((list)=><li>{list.place}</li>)} */}
+  // <h1> hello</h1>
+  // <h1>{state}</h1>
+  // <h1>{data}</h1>
+  // <button onClick={add}>Increse</button>
+  // <button onClick={del}>decrease</button>
+  // </>
+
+  <>
+  {/* {state.map((list,index)=><li key={index}>{list.title}</li>)} */}
+
+  <h1>Hello</h1>
+  <div className='container'>
+     <div className='row'>
+      {state.map((list)=>
+        <div className='col-md-4'>
+
+        <div className="card">
+          <img src="{list.image}" className="card-img-top" alt=" "/>
+          <div className="card-body">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">{list.price}</p>
+          <a href=" " className="btn btn-primary">{list.title}</a>
+          </div>
+      </div>
+          
+                    
+        </div>
+      )}
+     </div>
+  </div>
   </>
 
-  )
-
-}
+)}
 
