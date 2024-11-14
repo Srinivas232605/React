@@ -80,7 +80,7 @@ const [state, setState] = useState([])
 useEffect(()=>{
   fetch('https://fakestoreapi.com/products')
   .then((res)=>res.json())
-  .then((json)=> setState(json.results))
+  .then((json)=> setState(json))
 })
 
 
@@ -160,7 +160,7 @@ useEffect(()=>{
         <div className='col-md-4'>
 
         <div className="card">
-          <img src="{list.image}" className="card-img-top" alt=" "/>
+          <img src={list.image} className="card-img-top" alt=" "/>
           <div className="card-body">
           <h5 className="card-title">Card title</h5>
           <p className="card-text">{list.price}</p>
