@@ -1,14 +1,29 @@
 // import React, { useEffect } from 'react'
-import { useState, useEffect} from 'react'
+// import { useState, useEffect} from 'react'
 
 
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+// import '../node_modules/bootstrap/dist/css/bootstrap.css'
 // import Child from './Child'
 
 // import pic1 from './images/hero.jpg'
 // import pic2 from './images/smile.jpg'
 
 // import data from './images/data.json'
+
+// import Add from './Add'
+// import del from './del'
+// import HOC from './HOC.JS'
+
+import React from 'react'
+// import {createStore} from 'redux'
+
+// function reducer(state="Redux",action){
+//           return state
+// }
+
+// const store = createStore(reducer)
+// console.log(store)
+ import './store.js'
 
 export default function App() {
 
@@ -76,12 +91,12 @@ export default function App() {
 // }
 
 
-const [state, setState] = useState([])
-useEffect(()=>{
-  fetch('https://fakestoreapi.com/products')
-  .then((res)=>res.json())
-  .then((json)=> setState(json))
-})
+// const [state, setState] = useState([])
+// useEffect(()=>{
+//   fetch('https://fakestoreapi.com/products')
+//   .then((res)=>res.json())
+//   .then((json)=> setState(json))
+// })
 
 
   return (
@@ -150,29 +165,39 @@ useEffect(()=>{
   // <button onClick={del}>decrease</button>
   // </>
 
-  <>
-  {/* {state.map((list,index)=><li key={index}>{list.title}</li>)} */}
+  // <>
+  // {/* {state.map((list,index)=><li key={index}>{list.title}</li>)} */}
 
-  <h1>Hello</h1>
-  <div className='container'>
-     <div className='row'>
-      {state.map((list)=>
-        <div className='col-md-4'>
+  // <h1>Hello</h1>
+  // <div className='container'>
+  //    <div className='row'>
+  //     {state.map((list)=>
+  //       <div className='col-md-4'>
 
-        <div className="card">
-          <img src={list.image} className="card-img-top" alt=" "/>
-          <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">{list.price}</p>
-          <a href=" " className="btn btn-primary">{list.title}</a>
-          </div>
-      </div>
+  //       <div className="card">
+  //         <img src={list.image} className="card-img-top" alt=" "/>
+  //         <div className="card-body">
+  //         <h5 className="card-title">Card title</h5>
+  //         <p className="card-text">{list.price}</p>
+  //         <a href=" " className="btn btn-primary">{list.title}</a>
+  //         </div>
+  //     </div>
           
                     
-        </div>
-      )}
-     </div>
-  </div>
+  //       </div>
+  //     )}
+  //    </div>
+  // </div>
+  // </>
+
+  // <>
+  // <HOC y={Add}/>
+  // <HOC y={del}/>
+  // </>
+
+  <>
+  <h1>App Component</h1>
+  {/* <h3>{store.getState()}</h3> */}
   </>
 
 )}
